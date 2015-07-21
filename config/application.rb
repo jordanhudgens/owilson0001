@@ -22,5 +22,8 @@ module Enterpriseape
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    # Fix for the asset pipeline
+    Rails.application.config.assets.precompile += %w( glyphicons-halflings.png )
   end
 end
